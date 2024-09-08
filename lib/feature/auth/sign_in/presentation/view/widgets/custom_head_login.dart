@@ -24,7 +24,7 @@ class CustomHeadLogin extends StatelessWidget {
         const Text(
           'Login to continue',
           style: TextStyle(
-            fontSize: 17,
+            fontSize: 16,
             color: Colors.white,
           ),
         ),

@@ -19,7 +19,7 @@ class CustomHeadForgetPassword extends StatelessWidget {
         Text(
           'Enter your email address and we will\nshare a link to create a new\npassword.',
           style: TextStyle(
-            fontSize: 17,
+            fontSize: 16,
             color: Colors.white,
           ),
           textAlign: TextAlign.center,

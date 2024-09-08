@@ -7,4 +7,5 @@ class MyColor{
   static const kColorBlack = Color(0xff000000);
   static const kColorBlackLight = Color(0xff263238);
   static const kColorWhite = Color(0xffFFFFFF);
+  static const kLabelTextColor = Color(0xff777b86);
 }

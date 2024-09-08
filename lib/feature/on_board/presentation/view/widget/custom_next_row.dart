@@ -1,5 +1,5 @@
 import 'package:e_learning/core/utils/colors.dart';
-import 'package:e_learning/core/widgets/submit.dart';
+import 'package:e_learning/core/func/submit.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

@@ -11,32 +11,32 @@ class ForGetPasswordView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColor.kBackGroundColorBlack,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        actions: [
-          FloatingActionButton(
-            backgroundColor: Colors.white,
-            mini: true,
-            onPressed: () {
-              GoRouter.of(context).pop();
-            },
-            child: const FaIcon(FontAwesomeIcons.xmark),
-          ),
-          // InkWell(
-          //   onTap: () {
-          //     GoRouter.of(context).pop();
-          //   },
-          //   child: const CircleAvatar(
-          //     backgroundColor: Colors.white,
-          //     radius: 20,
-          //     child: FaIcon(FontAwesomeIcons.xmark),
-          //   ),
-          // ),
-          const SizedBox(width: 20)
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                const Spacer(),
+                InkWell(
+                  onTap: () {
+                    GoRouter.of(context).pop();
+                  },
+                  child: const CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 17,
+                    child: FaIcon(
+                      FontAwesomeIcons.xmark,
+                      color: Color(0xff4b4b4b),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const ForgetPasswordViewBody(),
+          ],
+        ),
       ),
-      body: const ForgetPasswordViewBody(),
     );
   }
 }

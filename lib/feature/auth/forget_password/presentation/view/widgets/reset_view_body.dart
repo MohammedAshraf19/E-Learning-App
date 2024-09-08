@@ -1,3 +1,4 @@
+import 'package:e_learning/core/utils/const.dart';
 import 'package:e_learning/core/widgets/custom_button.dart';
 import 'package:e_learning/core/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -33,34 +34,35 @@ class _ResetViewBodyState extends State<ResetViewBody> {
                 CustomTextFormField(
                   controller: passwordController,
                   keyboardType: TextInputType.visiblePassword,
-                  prefixIcon: const Icon(Icons.lock_outline),
-                  labelText: 'Password',
+                  //prefixIcon: const Icon(Icons.lock_outline),
+                  labelText: '${kTapTFF}New Password',
                   validatorText: 'enter your password !',
                   obscure: isPassword,
-                  suffixIcon: isPassword
-                      ? const Icon(
-                          Icons.visibility_outlined,
-                          color: Colors.grey,
-                        )
-                      : const Icon(
-                          Icons.visibility_off_outlined,
-                          color: Colors.grey,
-                        ),
-                  suffixIconPressed: () {
-                    setState(() {
-                      isPassword = !isPassword;
-                    });
-                  },
+                  // suffixIcon: isPassword
+                  //     ? const Icon(
+                  //         Icons.visibility_outlined,
+                  //         color: Colors.grey,
+                  //       )
+                  //     : const Icon(
+                  //         Icons.visibility_off_outlined,
+                  //         color: Colors.grey,
+                  //       ),
+                  // suffixIconPressed: () {
+                  //   setState(() {
+                  //     isPassword = !isPassword;
+                  //   });
+                  // },
                 ),
                 const SizedBox(height: 15),
                 CustomTextFormField(
                   controller: confirmController,
                   keyboardType: TextInputType.visiblePassword,
-                  prefixIcon: const Icon(Icons.lock_outline),
-                  labelText: 'Confirm Password',
+                  //prefixIcon: const Icon(Icons.lock_outline),
+                  labelText: '${kTapTFF}Confirm Password',
                   validatorText: 'confirm your password !',
+                  obscure: true,
                 ),
-                const SizedBox(height: 100),
+                const SizedBox(height: 200),
                 CustomButon(
                   text: 'Submit',
                   isLoading: isLoading,

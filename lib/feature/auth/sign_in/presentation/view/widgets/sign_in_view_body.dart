@@ -1,5 +1,6 @@
 import 'package:e_learning/core/utils/app_router.dart';
 import 'package:e_learning/core/utils/colors.dart';
+import 'package:e_learning/core/utils/const.dart';
 import 'package:e_learning/core/widgets/custom_button.dart';
 import 'package:e_learning/core/widgets/custom_text_button.dart';
 import 'package:e_learning/core/widgets/custom_text_form_field.dart';
@@ -38,32 +39,32 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 CustomTextFormField(
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
-                  prefixIcon: const Icon(Icons.email_outlined),
-                  labelText: 'E-mail Address',
-                  validatorText: 'enter your e-mail address !',
+                  // prefixIcon: const Icon(Icons.email_outlined),
+                  labelText: '${kTapTFF}User Name',
+                  validatorText: 'enter your user name !',
                 ),
                 const SizedBox(height: 15),
                 CustomTextFormField(
                   controller: passwordController,
                   keyboardType: TextInputType.visiblePassword,
-                  prefixIcon: const Icon(Icons.lock_outline),
-                  labelText: 'Password',
+                  // prefixIcon: const Icon(Icons.lock_outline),
+                  labelText: '${kTapTFF}Password',
                   validatorText: 'enter your password !',
                   obscure: isPassword,
-                  suffixIcon: isPassword
-                      ? const Icon(
-                          Icons.visibility_outlined,
-                          color: Colors.grey,
-                        )
-                      : const Icon(
-                          Icons.visibility_off_outlined,
-                          color: Colors.grey,
-                        ),
-                  suffixIconPressed: () {
-                    setState(() {
-                      isPassword = !isPassword;
-                    });
-                  },
+                  // suffixIcon: isPassword
+                  //     ? const Icon(
+                  //         Icons.visibility_outlined,
+                  //         color: Colors.grey,
+                  //       )
+                  //     : const Icon(
+                  //         Icons.visibility_off_outlined,
+                  //         color: Colors.grey,
+                  //       ),
+                  // suffixIconPressed: () {
+                  //   setState(() {
+                  //     isPassword = !isPassword;
+                  //   });
+                  // },
                 ),
                 //forget password
                 Row(
@@ -79,7 +80,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                     )
                   ],
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 70),
                 CustomButon(
                   background: MyColor.kPrimaryColor,
                   text: 'Log in',
@@ -93,7 +94,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                     }
                   },
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
                 CustomTextButton(
                   text: "",
                   textButton: 'Create New Account',

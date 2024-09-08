@@ -26,7 +26,7 @@ class _VerifyViewBodyState extends State<VerifyViewBody> {
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
       width: 56,
-      height: 60,
+      height: 66,
       textStyle: const TextStyle(
         fontSize: 22,
         color: Colors.white,
@@ -71,13 +71,14 @@ class _VerifyViewBodyState extends State<VerifyViewBody> {
                 CustomTextButton(
                   text: 'Did’t get the code?',
                   textButton: 'Resend',
+                  txtColor: Colors.white,
                   onPressed: () {},
                 ),
                 const Text(
                   "Expires in 01:00",
                   style: TextStyle(color: Colors.white),
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 80),
                 CustomButon(
                   background: MyColor.kPrimaryColor,
                   text: 'Submit',

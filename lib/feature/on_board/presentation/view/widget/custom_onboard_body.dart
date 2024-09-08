@@ -13,16 +13,17 @@ class CustomOnboardBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        if(OnBoardingCubit.get(context).page == 1)
+        if (OnBoardingCubit.get(context).page == 1)
           SizedBox(
             height: MediaQuery.of(context).size.height / 8,
           ),
-        if(OnBoardingCubit.get(context).page == 1)
+        if (OnBoardingCubit.get(context).page == 1)
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width / 7),
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width / 7),
             child: Text(
               onboardingModel.desc,
-              style:  TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
                 color: onboardingModel.txtColor,
@@ -30,30 +31,32 @@ class CustomOnboardBody extends StatelessWidget {
             ),
           ),
         Expanded(child: Image.asset(onboardingModel.image)),
-        if(OnBoardingCubit.get(context).page == 2)
+        if (OnBoardingCubit.get(context).page == 2)
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width / 10),
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width / 10),
             child: const Text(
               'Learn Anytime,',
-              style:  TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
                 color: MyColor.kColorWhite,
               ),
             ),
           ),
-        if(OnBoardingCubit.get(context).page != 1)
+        if (OnBoardingCubit.get(context).page != 1)
           Padding(
-          padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width / 10),
-          child: Text(
-            onboardingModel.desc,
-            style:  TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-              color: onboardingModel.txtColor,
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width / 10),
+            child: Text(
+              onboardingModel.desc,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+                color: onboardingModel.txtColor,
+              ),
             ),
           ),
-        ),
       ],
     );
   }

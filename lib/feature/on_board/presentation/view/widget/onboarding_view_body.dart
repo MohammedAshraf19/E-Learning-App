@@ -13,8 +13,6 @@ class OnBoardViewBody extends StatefulWidget {
 }
 
 class _OnBoardViewBodyState extends State<OnBoardViewBody> {
-
-
   @override
   void dispose() {
     OnBoardingCubit.get(context).pageController.dispose();
@@ -32,8 +30,9 @@ class _OnBoardViewBodyState extends State<OnBoardViewBody> {
               child: PageView.builder(
                 controller: OnBoardingCubit.get(context).pageController,
                 physics: const BouncingScrollPhysics(),
-                itemBuilder: (context, index) =>
-                    CustomOnboardBody(onboardingModel: OnBoardingCubit.get(context).onboards[index]),
+                itemBuilder: (context, index) => CustomOnboardBody(
+                  onboardingModel: OnBoardingCubit.get(context).onboards[index],
+                ),
                 itemCount: OnBoardingCubit.get(context).onboards.length,
                 onPageChanged: (index) {
                   OnBoardingCubit.get(context).onchange(index);
@@ -41,7 +40,9 @@ class _OnBoardViewBodyState extends State<OnBoardViewBody> {
               ),
             ),
             const SizedBox(height: 60),
-            CustomNextRow(isLast: OnBoardingCubit.get(context).isLast, pageController: OnBoardingCubit.get(context).pageController),
+            CustomNextRow(
+                isLast: OnBoardingCubit.get(context).isLast,
+                pageController: OnBoardingCubit.get(context).pageController),
             const SizedBox(height: 30)
           ],
         );
@@ -49,4 +50,3 @@ class _OnBoardViewBodyState extends State<OnBoardViewBody> {
     );
   }
 }
-

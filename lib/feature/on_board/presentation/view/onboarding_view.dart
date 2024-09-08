@@ -15,13 +15,18 @@ class OnboardingView extends StatelessWidget {
       child: BlocBuilder<OnBoardingCubit, OnBoardingState>(
         builder: (BuildContext context, OnBoardingState state) {
           SystemChrome.setSystemUIOverlayStyle(
-             SystemUiOverlayStyle(
-              statusBarColor: OnBoardingCubit.get(context).onBoardingPageColor[OnBoardingCubit.get(context).page], // Set the status bar color to green
-              statusBarIconBrightness: OnBoardingCubit.get(context).page == 1 ? Brightness.dark:Brightness.light, // Make the status bar icons light-colored
+            SystemUiOverlayStyle(
+              statusBarColor: OnBoardingCubit.get(context).onBoardingPageColor[
+                  OnBoardingCubit.get(context)
+                      .page], // Set the status bar color to green
+              statusBarIconBrightness: OnBoardingCubit.get(context).page == 1
+                  ? Brightness.dark
+                  : Brightness.light, // Make the status bar icons light-colored
             ),
           );
           return Scaffold(
-            backgroundColor: OnBoardingCubit.get(context).onBoardingPageColor[OnBoardingCubit.get(context).page],
+            backgroundColor: OnBoardingCubit.get(context)
+                .onBoardingPageColor[OnBoardingCubit.get(context).page],
             body: const OnBoardViewBody(),
           );
         },

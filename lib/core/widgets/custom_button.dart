@@ -6,7 +6,7 @@ class CustomButon extends StatelessWidget {
     super.key,
     this.height = 55,
     this.width = double.infinity,
-    this.radius = 12,
+    this.radius = 15,
     this.background = MyColor.kPrimaryColor,
     this.onPressed,
     required this.text,

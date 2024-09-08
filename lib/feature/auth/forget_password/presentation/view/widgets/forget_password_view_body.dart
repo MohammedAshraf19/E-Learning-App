@@ -1,5 +1,6 @@
 import 'package:e_learning/core/utils/app_router.dart';
 import 'package:e_learning/core/utils/colors.dart';
+import 'package:e_learning/core/utils/const.dart';
 import 'package:e_learning/core/widgets/custom_button.dart';
 import 'package:e_learning/core/widgets/custom_text_form_field.dart';
 import 'package:e_learning/feature/auth/forget_password/presentation/view/widgets/custom_head_forget_password.dart';
@@ -24,38 +25,35 @@ class _ForgetPasswordViewBodyState extends State<ForgetPasswordViewBody> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Form(
-          key: formKey,
-          autovalidateMode: autoValidateMode,
-          child: Column(
-            children: [
-              const CustomHeadForgetPassword(),
-              const SizedBox(height: 50),
-              CustomTextFormField(
-                controller: emailController,
-                keyboardType: TextInputType.emailAddress,
-                hintText: "\t\t\t\t\tEnter Email Address",
-                validatorText: 'enter your e-mail address !',
-              ),
-              const SizedBox(height: 30),
-              CustomButon(
-                background: MyColor.kPrimaryColor,
-                text: 'Send',
-                isLoading: isLoading,
-                onPressed: () {
-                  GoRouter.of(context).push(AppRouter.kVerifyView);
-                  if (formKey.currentState!.validate()) {
-                  } else {
-                    setState(() {
-                      autoValidateMode = AutovalidateMode.always;
-                    });
-                  }
-                },
-              ),
-            ],
-          ),
+      child: Form(
+        key: formKey,
+        autovalidateMode: autoValidateMode,
+        child: Column(
+          children: [
+            const CustomHeadForgetPassword(),
+            const SizedBox(height: 50),
+            CustomTextFormField(
+              controller: emailController,
+              keyboardType: TextInputType.emailAddress,
+              hintText: "${kTapTFF}Enter Email Address",
+              validatorText: 'enter your e-mail address !',
+            ),
+            const SizedBox(height: 30),
+            CustomButon(
+              background: MyColor.kPrimaryColor,
+              text: 'Send',
+              isLoading: isLoading,
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kVerifyView);
+                if (formKey.currentState!.validate()) {
+                } else {
+                  setState(() {
+                    autoValidateMode = AutovalidateMode.always;
+                  });
+                }
+              },
+            ),
+          ],
         ),
       ),
     );

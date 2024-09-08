@@ -1,3 +1,4 @@
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -17,12 +18,12 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.drawBorder = false,
     this.border,
-    this.colorText = Colors.grey,
+    this.colorText = MyColor.kLabelTextColor,
     this.isFilled = true,
     this.isWightThem = false,
     this.cursorColor = Colors.grey,
     this.validatorText,
-    this.radius = 12,
+    this.radius = 15,
     this.contentPadding = const EdgeInsets.symmetric(vertical: 22),
     this.fontSize,
     this.maxLines = 1,
