@@ -1,8 +1,9 @@
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:e_learning/core/widgets/submit.dart';
-import 'package:e_learning/feature/on_board/presentation/view/widget/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../manager/on_boarding_cubit.dart';
 
 class CustomNextRow extends StatelessWidget {
   const CustomNextRow({
@@ -25,10 +26,10 @@ class CustomNextRow extends StatelessWidget {
               onPressed: () {
                 submit(context);
               },
-              child: const Text(
+              child:  const Text(
                 'Start learning!',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: MyColor.kColorBlackLight,
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 ),
@@ -45,20 +46,21 @@ class CustomNextRow extends StatelessWidget {
                     child: const Text(
                       'Skip',
                       style: TextStyle(
-                        color: kPrimaryColor,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: MyColor.kPrimaryColorLight,
+                        fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),
                   const Spacer(),
                   SmoothPageIndicator(
                     controller: pageController,
-                    count: onboards.length,
+                    count: OnBoardingCubit.get(context).onboards.length,
                     effect: const ExpandingDotsEffect(
                       dotColor: Colors.grey,
-                      activeDotColor: kPrimaryColor,
-                      dotWidth: 10,
-                      dotHeight: 10,
+                      activeDotColor: MyColor.kPrimaryColorLight,
+                      dotWidth: 7,
+                      dotHeight: 7,
                       expansionFactor: 2,
                       spacing: 5,
                     ),
@@ -78,7 +80,10 @@ class CustomNextRow extends StatelessWidget {
                 );
               }
             },
-            icon: const Icon(Icons.arrow_forward_outlined),
+            icon:  Icon(
+                Icons.arrow_forward_outlined,
+              color: OnBoardingCubit.get(context).page == 0 ? MyColor.kColorWhite: MyColor.kColorBlackLight,
+            ),
           )
         ],
       ),

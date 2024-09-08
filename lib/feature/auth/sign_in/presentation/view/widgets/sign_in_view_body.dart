@@ -1,5 +1,5 @@
 import 'package:e_learning/core/utils/app_router.dart';
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:e_learning/core/widgets/custom_button.dart';
 import 'package:e_learning/core/widgets/custom_text_button.dart';
 import 'package:e_learning/core/widgets/custom_text_form_field.dart';
@@ -81,7 +81,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                 ),
                 const SizedBox(height: 50),
                 CustomButon(
-                  background: kPrimaryColor,
+                  background: MyColor.kPrimaryColor,
                   text: 'Log in',
                   isLoading: isLoading,
                   onPressed: () {

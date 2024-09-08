@@ -1,4 +1,4 @@
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:e_learning/feature/auth/forget_password/presentation/view/widgets/forget_password_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -10,7 +10,7 @@ class ForGetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackGroundColorBlack,
+      backgroundColor: MyColor.kBackGroundColorBlack,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,

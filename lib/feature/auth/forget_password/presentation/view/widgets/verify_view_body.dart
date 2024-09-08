@@ -1,5 +1,5 @@
 import 'package:e_learning/core/utils/app_router.dart';
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:e_learning/core/widgets/custom_button.dart';
 import 'package:e_learning/core/widgets/custom_text_button.dart';
 import 'package:e_learning/feature/auth/forget_password/presentation/view/widgets/custom_head_verify.dart';
@@ -79,7 +79,7 @@ class _VerifyViewBodyState extends State<VerifyViewBody> {
                 ),
                 const SizedBox(height: 50),
                 CustomButon(
-                  background: kPrimaryColor,
+                  background: MyColor.kPrimaryColor,
                   text: 'Submit',
                   isLoading: isLoading,
                   onPressed: () {

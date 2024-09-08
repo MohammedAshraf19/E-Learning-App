@@ -1,4 +1,4 @@
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:e_learning/feature/auth/sign_up/presentation/view/widgets/sign_up_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ class SignupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: kBackGroundColorBlack,
+      backgroundColor: MyColor.kBackGroundColorBlack,
       body: SignupViewBody(),
     );
   }

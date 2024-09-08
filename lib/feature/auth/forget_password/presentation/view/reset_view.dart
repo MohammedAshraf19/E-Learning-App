@@ -1,4 +1,4 @@
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:e_learning/feature/auth/forget_password/presentation/view/widgets/reset_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -9,7 +9,7 @@ class ResetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackGroundColorBlack,
+      backgroundColor: MyColor.kBackGroundColorBlack,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -19,7 +19,7 @@ class ResetView extends StatelessWidget {
           },
           icon: const Icon(
             Icons.arrow_back_outlined,
-            color: kPrimaryColor,
+            color: MyColor.kPrimaryColor,
           ),
         ),
         title: const Text(

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:e_learning/core/utils/app_router.dart';
 import 'package:e_learning/core/utils/assets.dart';
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -25,7 +25,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackGroundColorBlack,
+      backgroundColor: MyColor.kBackGroundColorBlack,
       body: Center(
         child: Image.asset(AssetsData.splashLogo2),
       ),

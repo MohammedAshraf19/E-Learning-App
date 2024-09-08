@@ -1,4 +1,4 @@
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButon extends StatelessWidget {
@@ -7,7 +7,7 @@ class CustomButon extends StatelessWidget {
     this.height = 55,
     this.width = double.infinity,
     this.radius = 12,
-    this.background = kPrimaryColor,
+    this.background = MyColor.kPrimaryColor,
     this.onPressed,
     required this.text,
     this.addLogo = false,

@@ -1,4 +1,4 @@
-import 'package:e_learning/core/utils/const.dart';
+import 'package:e_learning/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextButton extends StatelessWidget {
@@ -7,7 +7,7 @@ class CustomTextButton extends StatelessWidget {
     this.onPressed,
     required this.text,
     required this.textButton,
-    this.txtColor = kPrimaryColor,
+    this.txtColor = MyColor.kPrimaryColor,
     this.isLoading = false,
   });
 
