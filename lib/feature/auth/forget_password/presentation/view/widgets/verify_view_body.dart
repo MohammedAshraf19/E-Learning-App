@@ -74,9 +74,18 @@ class _VerifyViewBodyState extends State<VerifyViewBody> {
                   txtColor: Colors.white,
                   onPressed: () {},
                 ),
-                const Text(
-                  "Expires in 01:00",
-                  style: TextStyle(color: Colors.white),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Expires in ",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      "01:00",
+                      style: TextStyle(color: MyColor.kPrimaryColor),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 80),
                 CustomButon(
